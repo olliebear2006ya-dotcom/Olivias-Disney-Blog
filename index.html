@@ -1,90 +1,47 @@
+---
+layout: default
+title: Home
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Disney Blog | Olivia Andresen</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-        header {
-            border-bottom: 2px solid #333;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-        }
-        .post-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .post-list li {
-            background: #f4f4f4;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        footer {
-            margin-top: 40px;
-            font-size: 0.8em;
-            text-align: center;
-        }
-    </style>
+    <title>{{ page.title }} | Olivia's Disney Blog</title>
 </head>
 <body>
 
     <header>
-        <h1>The Disney Blog</h1>
-        <p>By <strong>Olivia Andresen</strong> | ENGL 170</p>
+        <h1>Welcome to Olivia's Disney Blog!</h1>
     </header>
 
     <main>
         <section>
-            <h2>Course Blog Posts</h2>
-            <p>Welcome to my blog! Here I will be exploring themes and analysis for my ENGL 170 course through the lens of Disney.</p>
+            <h2>Latest Disney Updates</h2>
+            <p>Check out my recent posts about all things Disney below:</p>
             
             <ul class="post-list">
+                {% for post in site.posts %}
                 <li>
-                    <h3><a href="#">Post 1: Introduction to Disney Analysis</a></h3>
-                    <p>Posted on January 13, 2026</p>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <h3>
+                        <a class="post-link" href="{{ post.url | relative_url }}">
+                            {{ post.title | escape }}
+                        </a>
+                    </h3>
+                    {% if post.excerpt %}
+                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                    {% endif %}
                 </li>
-                <li>
-                    <h3><a href="#">Post 2: Coming Soon...</a></h3>
-                    <p>Stay tuned for my next reflection.</p>
-                </li>
+                {% endfor %}
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Olivia Andresen</p>
+        <p>&copy; {{ site.time | date: "%Y" }} Olivia's Disney Blog</p>
     </footer>
 
 </body>
 </html>
-<ul class="post-list">
-    <li>
-        <a href="my-first-post.html">My First Post</a>
-        <span class="date">January 15, 2026</span>
-    </li>
-</ul>
-<li>
-    <a href="the-higher-thinking-post.html">Thinking at a Higher Level: The Disney Connection </a>
-    <span class="date">January 18, 2026</span>
-</li>
-<li>
-    <a href="the-sorcerers-thinking-post.html">The Sorcerer’s Tool: Disney and the Agency Paradox</a>
-    <span class="date">January 18, 2026</span>
-</li>
-<li>
-    <a href="from-magic-wands.html">From Magic Wands to Microchips: How Disney Became the Ultimate Silicon Equalizer</a>
-    <span class="date">January 25, 2026</span>
-</li>
-<li>
-    <a href="the-cost-of-a-soul.html">The Cost of a Soul: Disney and the Worth of Expression</a>
-    <span class="date">January 25, 2026</span>
-</li>
