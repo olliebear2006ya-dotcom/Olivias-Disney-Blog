@@ -1,14 +1,10 @@
----
-layout: default
-title: Home
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Olivia's Disney Blog</title>
+    <title>Home | Olivia's Disney Blog</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -20,54 +16,42 @@ title: Home
         <section>
             <h2>Latest Disney Updates</h2>
             <p>Check out my recent posts about all things Disney below:</p>
-            
+
             <ul class="post-list">
-                {% for post in site.posts %}
                 <li>
-                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <h3>
-                        <a class="post-link" href="{{ post.url | relative_url }}">
-                            {{ post.title | escape }}
-                        </a>
-                    </h3>
-                    {% if post.excerpt %}
-                        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-                    {% endif %}
+                    <a href="the-heroism.html">The Heroism of "Enough"</a>
+                    <span class="date">February 1, 2026</span>
                 </li>
-                {% endfor %}
+                <li>
+                    <a href="the-happily-project.html">The Happily Ever After Project</a>
+                    <span class="date">January 28, 2026</span>
+                </li>
+                <li>
+                    <a href="comment-mastermind-machine.html">Comment on Mastermind in the Machine</a>
+                    <span class="date">January 25, 2026</span>
+                </li>
+                <li>
+                    <a href="from-magic-wands.html">From Magic Wands to Microchips</a>
+                    <span class="date">January 23, 2026</span>
+                </li>
+                <li>
+                    <a href="the-cost-of-a-soul.html">The Cost of a Soul</a>
+                    <span class="date">January 21, 2026</span>
+                </li>
+                <li>
+                    <a href="the-sorcerers-tool.html">The Sorcerer's Tool</a>
+                    <span class="date">January 15, 2026</span>
+                </li>
+                <li>
+                    <a href="the-higher-thinking-post.html">The Higher Thinking Post</a>
+                    <span class="date">January 13, 2026</span>
+                </li>
             </ul>
         </section>
     </main>
-<li>
-    <a href="the-higher-thinking-post.html">The higher thinking post</a>
-    <span class="date">January 13, 2026</span>
-</li>
- <li>
-    <a href="the-sorcerers-tool.html">The Sorcerers tool</a>
-    <span class="date">January 15, 2026</span>
-</li>
-<li>
-    <a href="the-cost-of-a-soul.html">The cost of a soul</a>
-    <span class="date">January 21, 2026</span>
-</li>
-<li>
-    <a href="from-magic-wands.html">From Magic Wands to Microchips</a>
-    <span class="date">January 23, 2026</span>
-</li>
-<li>
-    <a href="comment-mastermind-machine.html">Comment on Mastermind in the Machine</a>
-    <span class="date">January 25, 2026</span>
-</li>
-<li>
-    <a href="the-happily-project.html">The Happily ever after project</a>
-    <span class="date">January 28, 2026</span>
-</li>
-<li>
-    <a href="the-heroism.html">The Heroism of "Enough"</a>
-    <span class="date">February 1, 2026</span>
-</li>
+
     <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} Olivia's Disney Blog</p>
+        <p>&copy; 2026 Olivia's Disney Blog</p>
     </footer>
 
 </body>
