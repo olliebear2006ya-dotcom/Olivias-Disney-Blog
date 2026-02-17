@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Failure & The Magic Kingdom | ENGL 170 Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">← Back to Feed</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header class="post-header">
+                <h1>When "Zero Failure" Becomes the Show</h1>
+                <p class="post-meta">February 16, 2026 | Technology & Culture Analysis</p>
+            </header>
+
+            <section class="post-content">
+                <p>For a typical software company, a 99.9% uptime (the "three nines") is considered a victory. But if a Disney ride like <em>Rise of the Resistance</em> had a 0.1% failure rate per cycle, it would break down dozens of times a day, ruining the "magic" for thousands of guests.</p>
+
+                <p>Disney’s approach to "Zero Failure" isn't just about better code; it’s about <strong>The Swiss Cheese Model</strong>.</p>
+
+                
+
+                <p>In Jeremy Brunt’s <a href="https://jrbrunts.github.io/zero-failure-protocol.html" target="_blank">Zero Failure Protocol</a>, he argues that we must treat failures as gaps in design rather than inevitable accidents. Disney does this through <strong>Functional Redundancy</strong>:</p>
+                
+                <ul>
+                    <li><strong>Dual-Channel Inputs:</strong> Every critical sensor on a ride (like those detecting vehicle position) often has a "redundant twin" using different technology—if an optical sensor fails, a magnetic one is there to catch it.</li>
+                    <li><strong>Safety PLCs:</strong> Disney uses specialized Industrial Control Systems (PLCs) that are hard-wired to "Fail-Safe." If the software hangs or a wire is cut, the default state is a physical stop.</li>
+                </ul>
+
+                <h2>The Cultural Shift: From Blame to Systems</h2>
+                <p>The most profound connection between Brunt’s post and Disney is the Human Element. Brunt emphasizes that "Zero Failure" requires a culture of psychological safety where "near misses" are celebrated as learning opportunities rather than punished as mistakes.</p>
+                
+                <p>Disney Imagineering operates on a similar "No-Blame" frequency. They utilize <strong>Pre-Accident Investigations</strong>, a concept that assumes humans will eventually make a mistake. Instead of training the human to be perfect, they design the system to be "human-immune."</p>
+
+                <blockquote>
+                    “We don’t fix the worker; we fix the conditions under which the worker works.” 
+                    <cite>— A core tenet of modern industrial safety.</cite>
+                </blockquote>
+
+                <h2>"The Sweatbox" vs. The Beta Test</h2>
+                <p>Brunt mentions that we often treat software failures as something to be "patched later." Disney can’t afford a "Day 1 Patch" for a roller coaster. To bridge this, they use <strong>Digital Twinning</strong>.</p>
+
+                
+
+                <p>Before a single piece of track is laid, Imagineers run millions of simulations—a digital "Zero Failure" environment—to find every possible way a system could fail. This is the ultimate expression of Brunt’s protocol: moving the failure from the real world (where it hurts) to the virtual world (where it teaches).</p>
+
+                <hr>
+
+                <h2>Final Thoughts: The Cost of Magic</h2>
+                <p>Critics of Brunt might say that "Zero Failure" is too expensive. And they’re right—it’s why a Disney ride costs $100+ million to build.</p>
+                
+                <p>However, as Brunt suggests, we are moving into an era where software manages our cars, our health, and our infrastructure. In these sectors, we can no longer afford the "move fast and break things" mentality. We have to start building like Imagineers—where the "magic" of a seamless experience is guaranteed by the invisible, rigorous protocols beneath the surface.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ENGL 170 Student Blog</p>
+    </footer>
+
+</body>
+</html>
